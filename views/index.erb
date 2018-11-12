@@ -1,4 +1,8 @@
-<h1>My name is <%= @name %></h1>
+<% if @name && @last_name.nil? %>
+  <h1>My name is <%= @name %> </h1>
+<% elsif @name && @last_name%>
+  <h1>My name is <%= @name + " " + @last_name %> </h1>
+<% end %>
 <div style='border: 3px dashed red'>
    <img src='http://bit.ly/1eze8aE'>
  </div>
